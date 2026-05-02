@@ -1,0 +1,24 @@
+/* Definisi Gerakan: Muncul dari bawah ke atas + Memudar */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Terapkan animasi ke elemen yang diinginkan */
+.main-title, .sub-title, .description-text, .cta-buttons, .hero-image {
+    opacity: 0; /* Mulai dari tidak terlihat */
+    animation: fadeInUp 1s ease-out forwards;
+}
+
+/* Berikan jeda waktu (delay) agar teks muncul bergantian */
+.main-title { animation-delay: 0.2s; }
+.sub-title { animation-delay: 0.5s; }
+.description-text { animation-delay: 0.8s; }
+.cta-buttons { animation-delay: 1.1s; }
+.hero-image { animation-delay: 0.5s; } /* Foto muncul bareng sub-title */
