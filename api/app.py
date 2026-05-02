@@ -1,17 +1,16 @@
 from flask import Flask, render_template
+import os
 
-app = Flask(__name__)
+# Update bagian ini
+app = Flask(__name__, 
+            template_folder='../templates', 
+            static_folder='../static')
 
 @app.route('/')
 def home():
     data_diri = {
         "nama_lengkap": "Bayu Setyawan",
         "npm": "50425194",
-        "jabatan": "Backend Developer | Hardware Integrator",
-        "deskripsi": "I am a dedicated Informatics student specialized in building robust backend systems with Python and Flask. My goal is to bridge the gap between complex hardware solutions and seamless user experiences.",
-        "lokasi": "Indonesia"
+        "deskripsi": "I am an enthusiastic Information Technology student..."
     }
     return render_template('index.html', data=data_diri)
-
-if __name__ == '__main__':
-    app.run(debug=True)
