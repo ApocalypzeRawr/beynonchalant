@@ -22,3 +22,20 @@
 .description-text { animation-delay: 0.8s; }
 .cta-buttons { animation-delay: 1.1s; }
 .hero-image { animation-delay: 0.5s; } /* Foto muncul bareng sub-title */
+.description-text {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-color);
+    max-width: 600px; /* Membatasi lebar teks di desktop agar tidak kepanjangan ke samping */
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+/* Pengaturan khusus untuk Layar HP (Mobile Mode) */
+@media (max-width: 600px) {
+    .description-text {
+        font-size: 14px; /* Ukuran font mengecil sedikit agar proporsional */
+        max-width: 100%; /* Di HP, teks boleh memenuhi lebar layar */
+        text-align: center; /* Rata tengah agar estetik di mobile */
+    }
+}

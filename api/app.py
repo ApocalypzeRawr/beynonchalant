@@ -11,6 +11,6 @@ def home():
     data_diri = {
         "nama_lengkap": "Bayu Setyawan",
         "npm": "50425194",
-        "deskripsi": "I am an enthusiastic Information Technology student..."
+        "deskripsi": "I am an enthusiastic Information Technology student, passionate about building robust systems with Java and Python, focused on creating efficient software solutions and hardware prototyping."
     }
     return render_template('index.html', data=data_diri)
